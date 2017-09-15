@@ -62,6 +62,16 @@
                         </div>
 
                         <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <p>OR</p>
+                                <a href="/auth/facebook">Connect with Facebook</a> |
+                                <a href="/auth/twitter">Connect with Twitter</a>| 
+                                <a href="/auth/google">Connect with Google</a>
+                                <p><hr></p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register

@@ -35,4 +35,11 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    //Laravel Socialite, OAuth authentication with Facebook, Twitter, Google, LinkedIn, GitHub and Bitbucket
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('FACEBOOK_CLIENT_CALLBACK')
+    ],
+
 ];
