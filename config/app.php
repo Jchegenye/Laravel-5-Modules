@@ -183,6 +183,9 @@ return [
         //Laravel Socialite, OAuth authentication with Facebook, Twitter, Google, LinkedIn, GitHub and Bitbucket
         Laravel\Socialite\SocialiteServiceProvider::class,
 
+        //Mongodb
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
+
 
     ],
 

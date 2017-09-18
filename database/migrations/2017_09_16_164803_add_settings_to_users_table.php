@@ -14,7 +14,7 @@ class AddSettingsToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            $table->text('settings')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddSettingsToUsersTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            //
+            Schema::dropIfExists('users');
         });
     }
 }
