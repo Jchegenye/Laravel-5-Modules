@@ -62,12 +62,11 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-12 text-center">
+                            <div class="col-md-6 col-md-offset-4">
                                 <p>OR</p>
-                                <a href="/auth/facebook">Connect with Facebook</a> |
-                                <a href="/auth/twitter">Connect with Twitter</a>| 
-                                <a href="/auth/google">Connect with Google</a>
-                                <p><hr></p>
+                                <a href="{{ url('/auth/google') }}" class="btn btn-google"><i class="fa fa-google"></i> Google</a>
+                                <a href="{{ url('/auth/twitter') }}" class="btn btn-twitter"><i class="fa fa-twitter"></i> Twitter</a>
+                                <a href="{{ url('/auth/facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
                             </div>
                         </div>
 

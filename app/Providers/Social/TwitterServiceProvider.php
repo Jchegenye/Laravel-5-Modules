@@ -49,9 +49,9 @@ class TwitterServiceProvider extends AbstractServiceProvider
         $newUser = $this->register([
             /*'first_name' => $user->user['first_name'],
             'last_name' => $user->user['last_name'],*/
-            //'name' => $user->user['first_name'] . ' ' . $user->user['last_name'],
+            'name' => $user->user['first_name'] . ' ' . $user->user['last_name'],
             'email' => $user->email,
-            //'gender' => ucfirst($user->user['gender']),
+            'gender' => ucfirst($user->user['gender']),
             'settings' => [
                 'twitter_id' => $user->id,                
             ]

@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\Social\FacebookServiceProvider;
 use App\Providers\Social\TwitterServiceProvider;
+use App\Providers\Social\GoogleServiceProvider;
 use GuzzleHttp\Exception\ClientException;
 use Laravel\Socialite\Two\InvalidStateException;
 use League\OAuth1\Client\Credentials\CredentialsException;
@@ -16,6 +17,7 @@ class SocialController extends Controller
     protected $providers = [
         'facebook' => FacebookServiceProvider::class,
         'twitter' => TwitterServiceProvider::class,
+        'google' => GoogleServiceProvider::class,
     ];
 
     /**

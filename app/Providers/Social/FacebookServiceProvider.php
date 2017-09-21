@@ -21,9 +21,8 @@ class FacebookServiceProvider extends AbstractServiceProvider
                     'verified',                    
                 ])->user();
 
-        //$existingUser = User::where('settings->facebook_id', $user->id)->first();
-
-        $existingUser = User::where('email', $user->email)->first();
+        //check facebook user existence by there fb id
+        $existingUser = User::where('settings->facebook_id', $user->id)->first();
 
         if ($existingUser) {
             $settings = $existingUser->settings;
@@ -38,8 +37,6 @@ class FacebookServiceProvider extends AbstractServiceProvider
         }
 
         $newUser = $this->register([
-            /*'first_name' => $user->user['first_name'],
-            'last_name' => $user->user['last_name'],*/
             'name' => $user->user['first_name'] . ' ' . $user->user['last_name'],
             'email' => $user->email,
             'gender' => ucfirst($user->user['gender']),
