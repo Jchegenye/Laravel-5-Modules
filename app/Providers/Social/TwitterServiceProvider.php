@@ -8,31 +8,19 @@ class TwitterServiceProvider extends AbstractServiceProvider
 {
    /**
      *  Handle Twitter response
-     * 
+     *
+     *  @author Jackson Chegenye http://jchegenye.me
      *  @return Illuminate\Http\Response
      */
     public function handle()
     {
-        /*$user = $this->provider->fields([
-                    'first_name', 
-                    'last_name', 
-                    'email', 
-                    'gender', 
-                    'verified',                    
-                ])->user();*/
-        $user = $this->provider->user(
-            [
-                'first_name', 
-                'last_name', 
-                'email', 
-                'gender', 
-                'verified',                    
-            ]
-        );
 
-        //$existingUser = User::where('settings->twitter_id', $user->id)->first();
+        $user = $this->provider->user([
+            'name', 
+            'email',
+        ]);
 
-        $existingUser = User::where('email', $user->email)->first();
+        $existingUser = User::where('settings->twitter_id', $user->id)->first();
 
         if ($existingUser) {
             $settings = $existingUser->settings;
@@ -47,11 +35,8 @@ class TwitterServiceProvider extends AbstractServiceProvider
         }
 
         $newUser = $this->register([
-            /*'first_name' => $user->user['first_name'],
-            'last_name' => $user->user['last_name'],*/
-            'name' => $user->user['first_name'] . ' ' . $user->user['last_name'],
+            'name' => $user->name,
             'email' => $user->email,
-            'gender' => ucfirst($user->user['gender']),
             'settings' => [
                 'twitter_id' => $user->id,                
             ]

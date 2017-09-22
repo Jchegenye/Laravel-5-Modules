@@ -37,7 +37,7 @@ class GoogleServiceProvider extends AbstractServiceProvider
             'name' => $user->name,
             'email' => $user->email,
             'settings' => [
-                'facebook_id' => $user->id,                
+                'google_id' => $user->id,                
             ]
         ]);        
 
