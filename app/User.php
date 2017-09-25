@@ -18,6 +18,10 @@ class User extends Authenticatable
         'name', 'email', 'password', 'settings',
     ];
 
+    protected $events = [
+        'created' => Events\NewUserEvent::class,
+    ];
+
     /**
      * The attributes that should be hidden for arrays.
      *
