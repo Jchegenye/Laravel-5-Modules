@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'settings',
+        'name', 'email', 'password', 'settings'
     ];
 
     protected $events = [
@@ -39,5 +39,8 @@ class User extends Authenticatable
     /*protected $casts = [
         'settings' => 'array'
     ];*/
-    protected $casts = [ 'settings' => 'json'];
+    protected $casts = [ 
+        'settings' => 'json',
+        'role' => 'json',
+    ];
 }

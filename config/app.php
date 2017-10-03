@@ -186,6 +186,8 @@ return [
         //Mongodb
         Jenssegers\Mongodb\MongodbServiceProvider::class,
 
+        //Laravel Debugbar (Integrates PHP Debug Bar)
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -238,6 +240,9 @@ return [
 
         //Laravel Socialite, OAuth authentication with Facebook, Twitter, Google, LinkedIn, GitHub and Bitbucket
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+
+        //Laravel Debugbar (Integrates PHP Debug Bar)
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
     ],
 
 ];

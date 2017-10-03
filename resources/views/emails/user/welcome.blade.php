@@ -7,7 +7,7 @@ Thanks for signing up. **We really appriciate** it. Let us _know if we can_ do m
 	The email address you signed up with is {{$user->email}}
 @endcomponent
 
-@component('mail::button', ['url' => '/home'])
+@component('mail::button', ['url' => 'http://laravel5modules.dev/home'])
 Login
 @endcomponent
 

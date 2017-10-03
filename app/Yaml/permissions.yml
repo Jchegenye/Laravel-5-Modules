@@ -1,0 +1,39 @@
+## MEMBER ROUTES
+Access Member Dashboard:
+  pid: 1
+  name: member_role
+  description: User can access the members dashboard.
+Access Members List:
+  pid: 2
+  name: access_to_members_list
+  description: User can access the members list.
+Access Member Profile:
+  pid: 3
+  name: access_to_member_profile
+  description: Member can access profile.
+## ADMIN ROUTES
+Access Admin Routes:
+  pid: 4
+  name: access_to_admin_routes
+  description: Admin can access the admin routes.
+## WORKBENCH ROUTES
+Access Workbench:
+  pid: 5
+  name: access_to_workbench
+  description: Admin can access the Workbench.
+Access Workbench & Give Permissions:
+  pid: 6
+  name: can_give_permissions
+  description: Admin can give permissions.
+Access Workbench & Approve/Decline User To Be A Member:
+  pid: 7
+  name: can_approve_a_member
+  description: Admin can approve or decline someone to be a member.
+Access Workbench & Lock/Unlock User/Member:
+  pid: 8
+  name: can_lock_user
+  description: Admin can lock or unloack any user from logging in.
+Access Workbench & Delete User/Member:
+  pid: 9
+  name: can_delete_an_account
+  description: Admin can delete an account.

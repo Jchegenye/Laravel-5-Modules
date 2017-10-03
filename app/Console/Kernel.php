@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        Commands\ConfigSuperUser::class,
+        Commands\GeneratePermissions::class,
     ];
 
     /**
@@ -26,6 +27,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+        $schedule->command('laravel5modules:initialize')->daily();
+        $schedule->command('laravel5modules:permissions')->daily();
     }
 
     /**
